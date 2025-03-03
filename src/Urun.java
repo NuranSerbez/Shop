@@ -3,14 +3,16 @@ public class Urun {
     private String urunAdi;
     private int urunAdet;
     private int urunFiyat;
-    private int kategoriID;
-    public Urun(int urunID, String urunAdi, int urunAdet, int urunFiyat, int kategoriID) {
+    private Kategori kategori;
+
+    public Urun(int urunID) {
         this.urunID = urunID;
-        this.urunAdi = urunAdi;
+        this.urunAdi = this.urunAdi;
         this.urunAdet = urunAdet;
         this.urunFiyat = urunFiyat;
-        this.kategoriID = kategoriID;
+        this.kategori = kategori;
     }
+
     public int getUrunID() {
 
         return urunID;
@@ -51,20 +53,26 @@ public class Urun {
         this.urunFiyat = urunFiyat;
     }
 
-    public int getKategoriID() {
+    public Kategori getKategori() {
 
-        return kategoriID;
+        return kategori;
     }
 
-    public void setKategoriID(int kategoriID) {
-
-        this.kategoriID = kategoriID;
+    public void setKategori(Kategori kategori) {
+        this.kategori = kategori;
     }
+
     @Override
     public String toString() {
-        return "Urun{" + "urunID=" + urunID + ", urunAdi='" + urunAdi + '\'' + ", urunAdet=" + urunAdet + ", urunFiyat=" + urunFiyat + ", kategoriID=" + kategoriID + '}';
+        return "Urun{" +
+                "urunID=" + urunID +
+                ", urunAdi='" + urunAdi + '\'' +
+                ", urunAdet=" + urunAdet +
+                ", urunFiyat=" + urunFiyat +
+                ", kategori=" + kategori +
+                '}';
     }
     public static void main(String[] args) {
-        System.out.println("BAŞARILI");
+
     }
 }

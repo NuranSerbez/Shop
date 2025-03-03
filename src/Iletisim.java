@@ -1,11 +1,11 @@
 public class Iletisim {
     private int iletisimID;
-    private int musteriID;
+    private Musteriler musteri;
     private String adres;
     private int telefon;
-    public Iletisim(int iletisimID, int musteriID, String adres, int telefon) {
+    public Iletisim(int iletisimID, String adres, int telefon) {
         this.iletisimID = iletisimID;
-        this.musteriID = musteriID;
+        this.musteri = musteri;
         this.adres = adres;
         this.telefon = telefon;
     }
@@ -18,12 +18,12 @@ public class Iletisim {
         this.iletisimID = iletisimID;
     }
 
-    public int getMusteriID() {
-        return musteriID;
+    public Musteriler getMusteriler() {
+        return musteri;
     }
 
-    public void setMusteriID(int musteriID) {
-        this.musteriID = musteriID;
+    public void setMusteri(Musteriler musteri) {
+        this.musteri = musteri;
     }
 
     public String getAdres() {
@@ -45,4 +45,6 @@ public class Iletisim {
     public static void main(String[] args) {
 
     }
+
+
 }

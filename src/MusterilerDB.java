@@ -8,22 +8,17 @@ public class MusterilerDB {
     private static final String UPDATE_MUSTERI = "UPDATE musteriler SET ad = ?, soyad = ?, tckn = ?, email = ? WHERE musteriID = ?";
     private static final String DELETE_MUSTERI = "DELETE FROM musteriler WHERE musteriID = ?";
 
-    // Tüm müşterileri listeleme
     public List<Musteriler> getAllMusteriler() {
         List<Musteriler> musteriler = new ArrayList<>();
         try (Connection conn = DatabaseConnection.connect();
              PreparedStatement stmt = conn.prepareStatement(SELECT_ALL_MUSTERILER);
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
-                // Müşteri objesini oluşturup listeye ekliyoruz
                 Musteriler musteri = new Musteriler(
-                        rs.getInt("musteriID"),
-                        rs.getString("ad"),
-                        rs.getString("soyad"),
-                        rs.getInt("tckn")
+                        rs.getInt("musteriID")
                 );
                 musteri.setEmail(rs.getString("email"));
-                musteriler.add(musteri); // Listeye ekle
+                musteriler.add(musteri);
             }
         } catch (SQLException e) {
             System.out.println("Müşteri listeleme hatası: " + e.getMessage());
@@ -31,7 +26,6 @@ public class MusterilerDB {
         return musteriler;
     }
 
-    // Yeni müşteri ekleme
     public void add(Musteriler musteri) {
         try (Connection conn = DatabaseConnection.connect();
              PreparedStatement stmt = conn.prepareStatement(INSERT_MUSTERI)) {
@@ -46,7 +40,6 @@ public class MusterilerDB {
         }
     }
 
-    // Müşteri güncelleme
     public void update(Musteriler musteri) {
         try (Connection conn = DatabaseConnection.connect();
              PreparedStatement stmt = conn.prepareStatement(UPDATE_MUSTERI)) {
@@ -61,7 +54,6 @@ public class MusterilerDB {
         }
     }
 
-    // Müşteri silme
     public void delete(Musteriler musteri) {
         try (Connection conn = DatabaseConnection.connect();
              PreparedStatement stmt = conn.prepareStatement(DELETE_MUSTERI)) {

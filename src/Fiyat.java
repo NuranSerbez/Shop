@@ -1,11 +1,11 @@
 public class Fiyat {
     private int fiyatID;
-    private int urunID;
+    private Urun urun;
     private int fiyat;
 
-    public Fiyat(int fiyatID, int urunID, int fiyat) {
+    public Fiyat(int fiyatID) {
         this.fiyatID = fiyatID;
-        this.urunID = urunID;
+        this.urun = urun;
         this.fiyat = fiyat;
     }
 
@@ -19,13 +19,13 @@ public class Fiyat {
         this.fiyatID = fiyatID;
     }
 
-    public int getUrunID() {
+    public Urun getUrun() {
 
-        return urunID;
+        return urun;
     }
 
-    public void setUrunID(int urunID) {
-        this.urunID = urunID;
+    public void setUrun(Urun urun) {
+        this.urun = urun;
     }
 
     public int getFiyat() {
@@ -38,7 +38,7 @@ public class Fiyat {
 
     @Override
     public String toString() {
-        return "Fiyat{" + "fiyatID=" + fiyatID + ", urunID='" + urunID + '\'' + ", fiyat=" + fiyat + '}';
+        return "Fiyat{" + "fiyatID=" + fiyatID + ", urun='" + urun + '\'' + ", fiyat=" + fiyat + '}';
     }
 
 

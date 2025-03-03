@@ -2,19 +2,19 @@ import java.time.LocalDateTime;
 import java.util.List;
 public class Sepet {
     private int sepetID;
-    private int musteriID;
+    private Musteriler musteriler;
     public LocalDateTime guncellemeTarihi;
     private List<SepetDetay> sepetDetaylar;
-    public Sepet(int sepetID, int musteriID, LocalDateTime guncellemeTarihi, List<SepetDetay> sepetDetaylar) {
+    public Sepet(int sepetID) {
         this.sepetID = sepetID;
-        this.musteriID = musteriID;
+        this.musteriler = musteriler;
         this.guncellemeTarihi = guncellemeTarihi;
         this.sepetDetaylar = sepetDetaylar;
     }
 
 
 
-    public Sepet(int sepetID, int musteriID, LocalDateTime now) {
+    public Sepet(int sepetID, Musteriler musteriler, LocalDateTime now) {
     }
 
     public int getSepetID() {
@@ -25,13 +25,13 @@ public class Sepet {
 
         this.sepetID = sepetID;
     }
-    public int getMusteriID() {
+    public Musteriler getMusteriler() {
 
-        return musteriID;
+        return musteriler;
     }
-    public void setMusteriID(int musteriID) {
+    public void setMusteriler(Musteriler musteriler) {
 
-        this.musteriID = musteriID;
+        this.musteriler = musteriler;
     }
     public LocalDateTime getGuncellemeTarihi() {
         return guncellemeTarihi;
@@ -49,7 +49,7 @@ public class Sepet {
     }
     @Override
     public String toString() {
-        return "Sepet{" + "sepetID=" + sepetID + ", musteriID='" + musteriID + '\'' + ", guncellemeTarihi=" + guncellemeTarihi  + '}';
+        return "Sepet{" + "sepetID=" + sepetID + ", musteriler='" + musteriler + '\'' + ", guncellemeTarihi=" + guncellemeTarihi  + '}';
     }
     public static void main(String[] args) {
         LocalDateTime getGuncellemeTarihi = LocalDateTime.now();

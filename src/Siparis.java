@@ -2,13 +2,13 @@ import java.util.List;
 
 public class Siparis {
     private int siparisID;
-    private int musteriID;
+    private Musteriler musteriler;
     private int toplamTutar;
     private List<SiparisDetay> siparisDetaylar;
 
-    public Siparis(int siparisID, int musteriID, int toplamTutar, List<SiparisDetay> siparisDetaylar) {
+    public Siparis(int siparisID) {
         this.siparisID = siparisID;
-        this.musteriID = musteriID;
+        this.musteriler = musteriler;
         this.siparisDetaylar = siparisDetaylar;
         this.toplamTutar = hesaplaToplamTutar();
     }
@@ -23,14 +23,14 @@ public class Siparis {
         this.siparisID = siparisID;
     }
 
-    public int getMusteriID() {
+    public Musteriler getMusteriler() {
 
-        return musteriID;
+        return musteriler;
     }
 
-    public void setMusteriID(int musteriID) {
+    public void setMusteriler(Musteriler musteriler) {
 
-        this.musteriID = musteriID;
+        this.musteriler = musteriler;
     }
 
     public List<SiparisDetay> getSiparisDetaylar() {
@@ -52,7 +52,7 @@ public class Siparis {
     private int hesaplaToplamTutar() {
         int toplam = 0;
         for (SiparisDetay siparisDetay : siparisDetaylar) {
-            toplam += siparisDetay.getAdet() * siparisDetay.getFiyatID();
+            toplam += siparisDetay.getAdet() * siparisDetay.getFiyat().getFiyatID();
         }
         return toplam;
     }

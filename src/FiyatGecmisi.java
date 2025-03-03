@@ -1,12 +1,12 @@
 public class FiyatGecmisi {
     private int fiyatgecmisiID;
-    private int urunID;
-    private int fiyatID;
+    private Urun urun;
+    private Fiyat fiyat;
     private boolean gecerlilik;
-    public FiyatGecmisi(int fiyatgecmisiID, int urunID, int fiyatID, boolean gecerlilik) {
+    public FiyatGecmisi(int fiyatgecmisiID, Urun urun, Fiyat fiyat, boolean gecerlilik) {
         this.fiyatgecmisiID = fiyatgecmisiID;
-        this.urunID = urunID;
-        this.fiyatID = fiyatID;
+        this.urun = urun;
+        this.fiyat = fiyat;
         this.gecerlilik = gecerlilik;
     }
 
@@ -18,20 +18,20 @@ public class FiyatGecmisi {
         this.fiyatgecmisiID = fiyatgecmisiID;
     }
 
-    public int getUrunID() {
-        return urunID;
+    public Urun getUrun() {
+        return urun;
     }
 
-    public void setUrunID(int urunID) {
-        this.urunID = urunID;
+    public void setUrun(Urun urun) {
+        this.urun = urun;
     }
 
-    public int getFiyatID() {
-        return fiyatID;
+    public Fiyat getFiyat() {
+        return fiyat;
     }
 
-    public void setFiyatID(int fiyatID) {
-        this.fiyatID = fiyatID;
+    public void setFiyat(Fiyat fiyat) {
+        this.fiyat = fiyat;
     }
 
     public boolean isGecerlilik() {

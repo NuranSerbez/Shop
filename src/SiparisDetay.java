@@ -1,16 +1,16 @@
 public class SiparisDetay {
     private int siparisdetayID;
-    private int siparisID;
-    private int urunID;
+    private Siparis siparis;
+    private Urun urun;
     private int adet;
-    private int fiyatID;
+    private Fiyat fiyat;
 
-    public SiparisDetay(int siparisdetayID, int siparisID, int urunID, int adet, int fiyatID) {
+    public SiparisDetay(int siparisdetayID, Siparis siparis, Urun urun, int adet, Fiyat fiyat) {
         this.siparisdetayID = siparisdetayID;
-        this.siparisID = siparisID;
-        this.urunID = urunID;
+        this.siparis = siparis;
+        this.urun = urun;
         this.adet = adet;
-        this.fiyatID = fiyatID;
+        this.fiyat = fiyat;
     }
 
     public int getSiparisdetayID() {
@@ -23,24 +23,24 @@ public class SiparisDetay {
         this.siparisdetayID = siparisdetayID;
     }
 
-    public int getSiparisID() {
+    public Siparis getSiparis() {
 
-        return siparisID;
+        return siparis;
     }
 
-    public void setSiparisID(int siparisID) {
+    public void setSiparis(Siparis siparis) {
 
-        this.siparisID = siparisID;
+        this.siparis = siparis;
     }
 
-    public int getUrunID() {
+    public Urun getUrun() {
 
-        return urunID;
+        return urun;
     }
 
-    public void setUrunID(int urunID) {
+    public void setUrun(Urun urun) {
 
-        this.urunID = urunID;
+        this.urun = urun;
     }
 
     public int getAdet() {
@@ -53,14 +53,14 @@ public class SiparisDetay {
         this.adet = adet;
     }
 
-    public int getFiyatID() {
+    public Fiyat getFiyat() {
 
-        return fiyatID;
+        return fiyat;
     }
 
-    public void setFiyatID(int FiyatID) {
+    public void setFiyat(Fiyat fiyat) {
 
-        this.fiyatID = fiyatID;
+        this.fiyat = fiyat;
     }
 
     public static void main(String[] args) {

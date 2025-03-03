@@ -4,7 +4,7 @@ public class Musteriler {
     private String soyad;
     private int tckn;
     private String email;
-    public Musteriler(int musteriID, String ad, String soyad, int tckn) {
+    public Musteriler(int musteriID) {
         this.musteriID = musteriID;
         this.ad = ad;
         this.soyad = soyad;

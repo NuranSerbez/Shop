@@ -2,15 +2,15 @@ import java.util.List;
 
 public class SepetDetay {
     private int sepetdetayID;
-    private int sepetID;
-    private int urunID;
-    private int fiyatID;
+    private Sepet sepet;
+    private Urun urun;
+    private Fiyat fiyat;
     private int adet;
-    public SepetDetay(int sepetdetayID, int sepetID, int urunID, int fiyatID, int adet) {
+    public SepetDetay(int sepetdetayID, Sepet sepet, Urun urun, Fiyat fiyat, int adet) {
         this.sepetdetayID = sepetdetayID;
-        this.sepetID = sepetID;
-        this.urunID = urunID;
-        this.fiyatID = fiyatID;
+        this.sepet = sepet;
+        this.urun = urun;
+        this.fiyat = fiyat;
         this.adet = adet;
     }
     public int getSepetdetayID() {
@@ -21,35 +21,36 @@ public class SepetDetay {
 
         this.sepetdetayID = sepetdetayID;
     }
-    public int getSepetID() {
+    public Sepet getSepet() {
 
-        return sepetID;
+        return sepet;
     }
-    public void setSepetID(int sepetID) {
+    public void setSepet(Sepet sepet) {
 
-        this.sepetID = sepetID;
+        this.sepet = sepet;
     }
-    public int getUrunID() {
+    public Urun getUrun() {
 
-        return urunID;
+        return urun;
     }
-    public void setUrunID(int urunID) {
+    public void setUrun(Urun urun) {
 
-        this.urunID = urunID;
+        this.urun = urun;
     }
-    public int getFiyatID() {
+    public Fiyat getFiyat() {
 
-        return fiyatID;
+        return fiyat;
     }
-    public void setFiyatID(int fiyatID) {
+    public void setFiyat(Fiyat fiyat) {
 
-        this.fiyatID = fiyatID;
+        this.fiyat = fiyat;
     }
     public int getAdet() {
 
         return adet;
     }
     public void setAdet(int adet) {
+
         this.adet = adet;
     }
     public static void main(String[] args) {
